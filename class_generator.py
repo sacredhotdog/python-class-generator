@@ -41,11 +41,11 @@ def generate():
         props_definitions += LINE_BREAK
         props_definitions += f"{INDENT}@property{LINE_BREAK}"
         props_definitions += f"{INDENT}def {attribute}(self):{LINE_BREAK}"
-        props_definitions += f"{INDENT * 2}return self.{attribute}{LINE_BREAK}"
+        props_definitions += f"{INDENT * 2}return self._{attribute}{LINE_BREAK}"
         props_definitions += LINE_BREAK
         props_definitions += f"{INDENT}@{attribute}.setter{LINE_BREAK}"
         props_definitions += f"{INDENT}def {attribute}(self, {attribute}):{LINE_BREAK}"
-        props_definitions += f"{INDENT * 2}self.{attribute} = {attribute}{LINE_BREAK}"
+        props_definitions += f"{INDENT * 2}self._{attribute} = {attribute}{LINE_BREAK}"
 
         if args.generate_eq:
             if attribute_count > 1:
