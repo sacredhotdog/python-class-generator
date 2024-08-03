@@ -74,7 +74,9 @@ def generate():
         eq_definition += f"{INDENT * 3}return NotImplemented{LINE_BREAK}"
         eq_definition += LINE_BREAK
         eq_definition += f"{INDENT * 2}if other is not None:{LINE_BREAK}"
-        eq_definition += f"{INDENT * 3}return {eq_attribute_comparisons}"
+        eq_definition += f"{INDENT * 3}return {eq_attribute_comparisons}{LINE_BREAK}"
+        eq_definition += LINE_BREAK
+        eq_definition += f"{INDENT * 2}return False{LINE_BREAK}"
 
         hash_definition += LINE_BREAK
         hash_definition += f"{INDENT}def __hash__(self):{LINE_BREAK}"
